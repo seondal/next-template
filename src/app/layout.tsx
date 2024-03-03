@@ -15,8 +15,10 @@ export default function RootLayout({
   return (
     <html lang="kor">
       <body>
-        {children}
+        <header></header>
+        <main>{children}</main>
         <Analytics />
+        <footer></footer>
       </body>
     </html>
   );
