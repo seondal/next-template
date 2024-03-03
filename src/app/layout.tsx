@@ -20,7 +20,9 @@ export default function RootLayout({
           {children}
         </main>
         <Analytics />
-        <footer></footer>
+        <footer className="flex flex-col justify-center items-center">
+          <a href="https://toss.me/seondal">이 사이트 만든 사람</a>
+        </footer>
       </body>
     </html>
   );
