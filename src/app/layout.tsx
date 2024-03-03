@@ -16,7 +16,9 @@ export default function RootLayout({
     <html lang="kor">
       <body>
         <header></header>
-        <main>{children}</main>
+        <main className="flex flex-col justify-center items-center">
+          {children}
+        </main>
         <Analytics />
         <footer></footer>
       </body>
