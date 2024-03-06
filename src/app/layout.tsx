@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { GA_TAG } from "@/constants/env";
 
 export const metadata: Metadata = {
   title: "Title",
@@ -19,6 +21,7 @@ export default function RootLayout({
         <main className="flex flex-col justify-center items-center">
           {children}
         </main>
+        <GoogleAnalytics gaId={GA_TAG} />
         <Analytics />
         <footer className="flex flex-col justify-center items-center">
           <a href="https://toss.me/seondal">이 사이트 만든 사람</a>
