@@ -8,6 +8,7 @@
   --text: #121212;
   --text-secondary: #999;
   --link: #118bee;
+  --main: #00654F;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +25,14 @@ body {
 
 a {
   color: var(--link);
+}
+
+button {
+  font: bold;
+  background-color: var(--main);
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  color: white;
 }
