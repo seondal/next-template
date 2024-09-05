@@ -1,2 +1,3 @@
-export const GA_TAG = process.env.NEXT_PUBLIC_GA_TAG || "";
-export const ADSENSE_ACCOUNT = process.env.NEXT_PUBLIC_ADSENSE_ACCOUNT || "";
+export const GOOGLE_ANALYITICS = process.env.NEXT_PUBLIC_ANALYTICS_ID || "";
+export const GOOGLE_ADSENSE = process.env.NEXT_PUBLIC_ADSENSE || "";
+export const DEVELOPER = process.env.NEXT_PUBLIC_DEVELOPER || "";

@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+
+import type { Metadata } from "next";
+import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { ADSENSE_ACCOUNT, GA_TAG } from "@/constants/env";
+import { DEVELOPER, GOOGLE_ADSENSE, GOOGLE_ANALYITICS } from "@/constants/env";
 
 export const metadata: Metadata = {
   title: "Title",
   description: "description",
   other: {
-    "google-adsense-account": ADSENSE_ACCOUNT,
+    "google-adsense-account": GOOGLE_ADSENSE,
   },
 };
 
@@ -19,14 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="kor">
+      <head>
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${GOOGLE_ADSENSE}`}
+          crossOrigin="anonymous"></Script>
+      </head>
       <body>
         <header></header>
         <main className="text-center max-w-96 m-auto">{children}</main>
-        <GoogleAnalytics gaId={GA_TAG} />
-        <Analytics />
+        <GoogleAnalytics gaId={GOOGLE_ANALYITICS} />
         <footer className="text-center p-4">
           <div>문의, 기능제안, 오류신고 편하게 해주세요 !</div>
-          <a href="https://toss.me/seondal">이 사이트 만든 사람</a>
+          <a href={DEVELOPER}>이 사이트 만든 사람</a>
         </footer>
       </body>
     </html>
