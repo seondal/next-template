@@ -1,17 +1,10 @@
 import "./globals.css";
-
-import type { Metadata } from "next";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { DEVELOPER, GOOGLE_ADSENSE, GOOGLE_ANALYITICS } from "@/constants/env";
+import { DEVELOPER, GOOGLE_ADSENSE, GOOGLE_ANALYITICS } from "@/constants/ENV";
+import { META_DATA } from "@/constants/META_DATA";
 
-export const metadata: Metadata = {
-  title: "Title",
-  description: "description",
-  other: {
-    "google-adsense-account": GOOGLE_ADSENSE,
-  },
-};
+export const metadata = META_DATA;
 
 export default function RootLayout({
   children,
