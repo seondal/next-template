@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { GOOGLE_ADSENSE, GOOGLE_SEARCH, NAVER_SEARCH } from "./ENV";
+import { GOOGLE_ADSENSE, GOOGLE_SEARCH, NAVER_SEARCH } from "./env";
 
 export const META_DATA: Metadata = {
   title: {
